@@ -1,5 +1,5 @@
 # caltech_wave_2024
-Code written during the summer of 2024 for a project at Caltech testing the coherence of periodicity in AGN signals from supermassive black hole binaries.
+Code written during the summer of 2024 for a project at Caltech testing the coherence of periodicity in AGN signals from supermassive black hole binaries. See Wave_Fellowship_Final_Report.pdf for details.
 
 Split into several files:
 - LSP.py implements the Lomb-Scargle Periodogram, as well as includes code for generating a signal to analyze, fitting a Lorentzian to a periodogram, and subsequent calculations of Q factor and coherence time.
