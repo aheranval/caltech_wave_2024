@@ -49,7 +49,7 @@ def ornstein_uhlenbeck(theta, sigma, tau, X0, times, num_runs=1):
     return returnvalue
 
 
-# Example
+# Example using real data: simulating OU process that resembles real lightcurve
 
 '''
 data_path = "/Users/aliceheranval/Desktop/research/caltech reu/data_files/"
