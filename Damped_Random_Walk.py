@@ -6,21 +6,20 @@ import matplotlib.pyplot as plt
 # sigma is magnitude of noise
 # mean is the mean that the process eventually returns to
 # can use the mean of the real oscillatory signal
-def ornstein_uhlenbeck_process(theta, sigma, tau, X0, times, num_runs=1):
-    """
-    Simulates the Ornstein-Uhlenbeck process using the exact discretization.
 
-    This follows the definition as being a stochastic differential equation:
+'''
+Simulates the Ornstein-Uhlenbeck process using the exact discretization.
+This follows the definition as being a stochastic differential equation:
     dX(t) = -tau * x(t)dt + sigma * dW(t)
-    Where dW(t) denotes a Weiner process, or a Gaussian continuous process with independent increments.
+Where dW(t) denotes a Weiner process, or a Gaussian continuous process with independent increments.
 
-    This equation is solved so that the expected value of x(t) given x(s) is:
+This equation is solved so that the expected value of x(t) given x(s) is:
     E(X(t)|X(s)) = e^(-dt/tau) * X(s) + b * tau * (1 - e^(-dt/tau).
     
-    The numerical simulation of this follows the example given at:
-    https://github.com/cantaro86/Financial-Models-Numerical-Methods/blob/master/6.1%20Ornstein-Uhlenbeck%20process%20and%20applications.ipynb
+The numerical simulation of this follows the example given at:
+https://github.com/cantaro86/Financial-Models-Numerical-Methods/blob/master/6.1%20Ornstein-Uhlenbeck%20process%20and%20applications.ipynb
     
-    Parameters:
+Parameters:
     theta (float): Long-term mean (mean reversion level).
     sigma (float): Amplitude of noise.
     tau (float): Mean reversion time constant.
@@ -28,10 +27,12 @@ def ornstein_uhlenbeck_process(theta, sigma, tau, X0, times, num_runs=1):
     T (float): Total time to simulate.
     dt (float): Sampling rate.
     
-    Returns:
+Returns:
     List of tuples - for every iteration of this process the times and corresponding noise values are
         added to the list.
-    """
+'''
+
+def ornstein_uhlenbeck(theta, sigma, tau, X0, times, num_runs=1):
     returnvalue = []
     for run in range(num_runs):
         X = np.zeros(len(times))
