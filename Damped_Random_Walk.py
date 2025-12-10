@@ -24,7 +24,7 @@ Parameters:
 
 Suggestions:
     - Theta should be around 17 or so for a typical AGN.
-    - Sigma is usually at or under 1.
+    - Sigma is usually at or under 1. I've noticed that keeping it under 0.5 makes it more realistic for an AGN variability (even under 0.25)
     - To compare to a possible SMBHB light curve, use the same tau as the AGN period.
     - Remember to set X0 as the same as the mean if you are simulating an AGN.
     
