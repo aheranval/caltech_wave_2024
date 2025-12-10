@@ -2,11 +2,6 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# tau is characteristic timescale
-# sigma is magnitude of noise
-# mean is the mean that the process eventually returns to
-# can use the mean of the real oscillatory signal
-
 '''
 Simulates the Ornstein-Uhlenbeck process using the exact discretization.
 This follows the definition as being a stochastic differential equation:
@@ -24,8 +19,14 @@ Parameters:
     sigma (float): Amplitude of noise.
     tau (float): Mean reversion time constant.
     X0 (float): Initial value of the process.
-    T (float): Total time to simulate.
-    dt (float): Sampling rate.
+    times (array): Times over which to simulate the process.
+    num_runs (int): The number of noisy processes to simulate.
+
+Suggestions:
+    - Theta should be around 17 or so for a typical AGN.
+    - Sigma is usually at or under 1.
+    - To compare to a possible SMBHB light curve, use the same tau as the AGN period.
+    - Remember to set X0 as the same as the mean if you are simulating an AGN.
     
 Returns:
     List of tuples - for every iteration of this process the times and corresponding noise values are
